@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("../images/mark-eder-R9OS29xJb-8-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+
+header,
+footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+header {
+  &.circulo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 40px;
+
+    &.perfil-header {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      
+      &.foto {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.arcos {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+
+      &.arco {
+        fill: none;
+        stroke: #6f675a;
+        stroke-width: 4;
+        stroke-linecap: round;
+      }
+
+      &.arco-externo {
+        stroke-dasharray: 450 150; 
+        stroke-dashoffset: -60; 
+      }
+
+      &.arco-interno {
+        stroke-dasharray: 400 134;
+        stroke-dashoffset: 200;
+
+    }
+  }
+
+  }
+}
+
+
+/* .foto{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  margin-bottom: 1rem;
+} */
