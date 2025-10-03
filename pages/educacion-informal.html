@@ -15,167 +15,230 @@
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <!-- Aqui va el contenido de la página header -->
-    <header data-include="header.html"></header>
-    <main>
-      <section>
-        <h2>Mi educación informal</h2>
-        <table border="1" cellpadding="5" cellspacing="0">
-          <caption>
-            Cursos realizados en plataformas virtuales
-          </caption>
-          <thead>
-            <tr>
-              <th>Plataforma</th>
-              <th>Curso</th>
-              <th>Duración</th>
-              <th>Año</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Platzi</td>
-              <td>
-                Curso de Python: Comprehensions, Funciones y Manejo de Errores
-              </td>
-              <td></td>
-              <td>2024</td>
-            </tr>
-            <tr>
-              <td>Platzi</td>
-              <td>
-                Curso de Pensamiento Lógico: Manejo de Datos, Estructuras y
-                Funciones
-              </td>
-              <td></td>
-              <td>2024</td>
-            </tr>
-            <tr>
-              <td>Platzi</td>
-              <td>Curso de Pensamiento Lógico: Lenguajes de Programación</td>
-              <td></td>
-              <td>2024</td>
-            </tr>
-            <tr>
-              <td>Platzi</td>
-              <td>
-                Curso de Pensamiento Lógico: Algoritmos y Diagramas de Flujo
-              </td>
-              <td></td>
-              <td>2024</td>
-            </tr>
-            <tr>
-              <td>Platzi</td>
-              <td>Curso de Fundamentos de Python</td>
-              <td></td>
-              <td>2023</td>
-            </tr>
-            <tr>
-              <td>EDX-IBM</td>
-              <td>Introducción a la ciencia de datos y sus aplicaciones</td>
-              <td>36H</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>
-                Itinerario: Conviértete en profesional de Big Data para los
-                negocios: 7C
-              </td>
-              <td>11:34H + P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>
-                Itinerario: Domina el análisis de datos con Excel Power Query y
-                Power Pivot: 7C
-              </td>
-              <td>12:25H + P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>
-                Itinerario: Conviertete en especialista en Big Data para IT: 6C
-              </td>
-              <td>13:20H + P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>Itinerario: Conviertete en data analyst: 13C</td>
-              <td>29:34H +P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>
-                Itinerario: Conviertete en especialista en desarrollo Python: 7C
-              </td>
-              <td>15:42H + P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>Itinerario: Conviertete en experto de Excel: 13C</td>
-              <td>33:8H + P</td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>Industria de Talentos: Alcaldía de Medellín</td>
-              <td>Participación Ruta de Formación: Científico de datos</td>
-              <td></td>
-              <td>2022</td>
-            </tr>
-            <tr>
-              <td>LinkedIn Learning</td>
-              <td>Como comunicarse de forma efectiva por email</td>
-              <td>1:42H + P</td>
-              <td>2020</td>
-            </tr>
-            <tr>
-              <td>Sena</td>
-              <td>Excel Intermedio</td>
-              <td>40H</td>
-              <td>2019</td>
-            </tr>
-            <tr>
-              <td>Udemy</td>
-              <td>
-                Curso Power BI – Análisis de Datos y Business Intelligence -
-                Javier Gomez
-              </td>
-              <td>21H +P</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Udemy</td>
-              <td>Diseño de Bases de Datos Relacionales - Enzo D'Amario</td>
-              <td>11H + P</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Udemy</td>
-              <td>
-                Máster en SQL Server: Desde Cero a Nivel Profesional [2025] -
-                Mariano Puglisi
-              </td>
-              <td>16H + P</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Udemy</td>
-              <td>Web Scraping en Python - Leonardo Kuffo</td>
-              <td>19H + P</td>
-              <td></td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-      <aside data-include="barra-lateral.html"></aside>
-    </main>
-    <!-- aqui va el contenido de la página footer -->
-    <footer data-include="footer.html"></footer>
+    <div class="grid">
+      <header class="banner">
+        <div class="header">
+          <div class="circulo">
+            <div perfil-header>
+              <img
+                src="https://avatars.githubusercontent.com/u/193249316?v=4"
+                alt="Josser Solano"
+                class="foto"
+              />
+            </div>
+            <svg class="arcos" viewBox="0 0 220 220">
+              <circle class="arco arco-externo" cx="110" cy="108" r="100" />
+              <circle class="arco arco-interno" cx="110" cy="108" r="93" />
+            </svg>
+          </div>
+          <h1 class="nombre">Josser Solano</h1>
+          <p class="titulo">
+            Aprendiz Tecnólogo en Análisis y Desarrollo de Software
+          </p>
+        </div>
+      </header>
+      <div class="espacio-nav izquierda"></div>
+      <nav class="navegacion">
+        <a href="index.html" class="tab">Mi perfil</a>
+        <a href="nivel-educativo.html" class="tab">Mi nivel educativo</a>
+        <a href="educacion-informal.html" class="tab">Mi educación informal</a>
+        <a href="experiencia.html" class="tab">Mi experiencia</a>
+        <a href="libros.html" class="tab">Mis libros de consulta</a>
+      </nav>
+      <div class="espacio-nav derecha"></div>
+      <main class="contenido-principal">
+        <section>
+          <h2>Educación informal</h2>
+          <table class="tabla-cursos">
+            <caption>
+              Cursos realizados en plataformas virtuales
+            </caption>
+            <thead>
+              <tr>
+                <th>Plataforma</th>
+                <th>Curso</th>
+                <th>Duración</th>
+                <th>Año</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="ico platzi">Platzi</td>
+                <td>
+                  Curso de Python: Comprehensions, Funciones y Manejo de Errores
+                </td>
+                <td></td>
+                <td>2024</td>
+              </tr>
+              <tr>
+                <td class="ico platzi">Platzi</td>
+                <td>
+                  Curso de Pensamiento Lógico: Manejo de Datos, Estructuras y
+                  Funciones
+                </td>
+                <td></td>
+                <td>2024</td>
+              </tr>
+              <tr>
+                <td class="ico platzi">Platzi</td>
+                <td>Curso de Pensamiento Lógico: Lenguajes de Programación</td>
+                <td></td>
+                <td>2024</td>
+              </tr>
+              <tr>
+                <td class="ico platzi">Platzi</td>
+                <td>
+                  Curso de Pensamiento Lógico: Algoritmos y Diagramas de Flujo
+                </td>
+                <td></td>
+                <td>2024</td>
+              </tr>
+              <tr>
+                <td class="ico platzi">Platzi</td>
+                <td>Curso de Fundamentos de Python</td>
+                <td></td>
+                <td>2023</td>
+              </tr>
+              <tr>
+                <td class="ico edx">EDX-IBM</td>
+                <td>Introducción a la ciencia de datos y sus aplicaciones</td>
+                <td>36H</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>
+                  Itinerario: Conviértete en profesional de Big Data para los
+                  negocios: 7C
+                </td>
+                <td>11:34H + P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>
+                  Itinerario: Domina el análisis de datos con Excel Power Query
+                  y Power Pivot: 7C
+                </td>
+                <td>12:25H + P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>
+                  Itinerario: Conviertete en especialista en Big Data para IT:
+                  6C
+                </td>
+                <td>13:20H + P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>Itinerario: Conviertete en data analyst: 13C</td>
+                <td>29:34H +P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>
+                  Itinerario: Conviertete en especialista en desarrollo Python:
+                  7C
+                </td>
+                <td>15:42H + P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>Itinerario: Conviertete en experto de Excel: 13C</td>
+                <td>33:8H + P</td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico alcaldia">Industria de Talentos: Alcaldía de Medellín</td>
+                <td>Participación Ruta de Formación: Científico de datos</td>
+                <td></td>
+                <td>2022</td>
+              </tr>
+              <tr>
+                <td class="ico linkedin">LinkedIn Learning</td>
+                <td>Como comunicarse de forma efectiva por email</td>
+                <td>1:42H + P</td>
+                <td>2020</td>
+              </tr>
+              <tr>
+                <td class="ico sena">Sena</td>
+                <td>Excel Intermedio</td>
+                <td>40H</td>
+                <td>2019</td>
+              </tr>
+              <tr>
+                <td class="ico udemy">Udemy</td>
+                <td>
+                  Curso Power BI - Análisis de Datos y Business Intelligence -
+                  Javier Gomez
+                </td>
+                <td>21H +P</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="ico udemy">Udemy</td>
+                <td>Diseño de Bases de Datos Relacionales - Enzo D'Amario</td>
+                <td>11H + P</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="ico udemy">Udemy</td>
+                <td>
+                  Máster en SQL Server: Desde Cero a Nivel Profesional [2025] -
+                  Mariano Puglisi
+                </td>
+                <td>16H + P</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="ico udemy">Udemy</td>
+                <td>Web Scraping en Python - Leonardo Kuffo</td>
+                <td>19H + P</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td class="ico udemy">Udemy</td>
+                <td>Diseño Web Profesional - Carlos Arturo Esparza</td>
+                <td>52H + P</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+      <aside class="barra-lateral">
+        <h3>Contacto</h3>
+        <details>
+          <summary>Mi correo</summary>
+          <p><a href="mailto:jossersol1@gmail.com">jossersol1@gmail.com</a></p>
+        </details>
+        <details>
+          <summary>Mi teléfono</summary>
+          <p><a href="tel:+573176858381"></a>Llamar al 317 685 8381</p>
+        </details>
+        <details>
+          <summary>Mi dirección</summary>
+          <p><a href="https://maps.app.goo.gl/qnruKvSJcqrwdf869" target="_blank">Barrio San Diego - Medellín</a></p>
+        </details>
+        <details>
+          <summary>GitHub</summary>
+          <p><a href="https://github.com/jossersolano" target="_blank">https://github.com/jossersolano</a></p>
+        </details>
+        <details>
+          <summary>LinkedIn</summary>
+          <p>No disponible</p>
+        </details>
+      </aside>
+      <!-- aqui va el contenido de la página footer -->
+      <footer class="footer">
+        <address>Medellín, Antioquia</address>
+        <small>&copy; Derechos Reservados 2025</small>
+      </footer>
+    </div>
   </body>
 </html>

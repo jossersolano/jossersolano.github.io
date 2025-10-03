@@ -15,57 +15,114 @@
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <!-- Aqui va el contenido de la página header -->
-    <header data-include="header.html"></header>
-    <main>
-      <section>
-        <h2>Nivel Educativo</h2>
-        <div>
-          <img
-            src="https://cdn.urbe.edu/portal-urbe/images/logos/urbe-hd.png"
-            width="150px"
-            alt=""
-          />
-          <div>
-            <h3>Universitario</h3>
-            <dt>No disponible</dt>
-            <dd>No disponible</dd>
+    <div class="grid">
+      <header class="banner">
+        <div class="header">
+          <div class="circulo">
+            <div perfil-header>
+              <img
+                src="https://avatars.githubusercontent.com/u/193249316?v=4"
+                alt="Josser Solano"
+                class="foto"
+              />
+            </div>
+            <svg class="arcos" viewBox="0 0 220 220">
+              <circle class="arco arco-externo" cx="110" cy="108" r="100" />
+              <circle class="arco arco-interno" cx="110" cy="108" r="93" />
+            </svg>
           </div>
+          <h1 class="nombre">Josser Solano</h1>
+          <p class="titulo">
+            Aprendiz Tecnólogo en Análisis y Desarrollo de Software
+          </p>
         </div>
-        <div>
-          <img
-            src="https://zajuna.sena.edu.co/img/logos/sena-logo.svg"
-            width="150px"
-            alt=""
-          />
-          <div>
-            <h3>Tecnológico</h3>
-            <dt>Sena, Medellín - Tecnología</dt>
-            <dd>Tecnología en Análisis y Desarrollo de Software – En Curso</dd>
+      </header>
+      <div class="espacio-nav izquierda"></div>
+      <nav class="navegacion">
+        <a href="index.html" class="tab">Mi perfil</a>
+        <a href="nivel-educativo.html" class="tab">Mi nivel educativo</a>
+        <a href="educacion-informal.html" class="tab">Mi educación informal</a>
+        <a href="experiencia.html" class="tab">Mi experiencia</a>
+        <a href="libros.html" class="tab">Mis libros de consulta</a>
+      </nav>
+      <div class="espacio-nav derecha"></div>
+      <main class="contenido-principal">
+        <section class="nivel-educativo">
+          <h2>Nivel Educativo</h2>
+          <div class="nivel">
+            <img
+              src="https://cdn.urbe.edu/portal-urbe/images/logos/urbe-hd.png"
+              width="150px"
+              alt=""
+            />
+            <div>
+              <h3>Universitario</h3>
+              <dt>No disponible</dt>
+              <dd>No disponible</dd>
+            </div>
           </div>
-        </div>
-        <div>
-          <img
-            src="https://normalsuperiordecorozal.edu.co/wp-content/uploads/2017/04/descarga-150x150.jpg"
-            width="150px"
-            alt=""
-          />
-          <div>
-            <h3>Académico</h3>
-            <dt>
-              Institución Educativativa Escuela Normal Superior, Corozal -
-              Bachillerato
-            </dt>
-            <dd>
-              Bachiller Académico con profundización en el campo de la educación
-              y la formación pedagógica
-            </dd>
+          <div class="nivel">
+            <img
+              src="https://zajuna.sena.edu.co/img/logos/sena-logo.svg"
+              width="150px"
+              alt=""
+            />
+            <div>
+              <h3>Tecnológico</h3>
+              <dt>Sena, Medellín - Tecnología</dt>
+              <dd>
+                Tecnología en Análisis y Desarrollo de Software – En Curso
+              </dd>
+            </div>
           </div>
-        </div>
-      </section>
-      <aside data-include="barra-lateral.html"></aside>
-    </main>
-    <!-- aqui va el contenido de la página footer -->
-    <footer data-include="footer.html"></footer>
+          <div class="nivel">
+            <img
+              src="https://normalsuperiordecorozal.edu.co/wp-content/uploads/2017/04/descarga-150x150.jpg"
+              width="150px"
+              alt=""
+            />
+            <div>
+              <h3>Académico</h3>
+              <dt>
+                Institución Educativativa Escuela Normal Superior, Corozal -
+                Bachillerato
+              </dt>
+              <dd>
+                Bachiller Académico con profundización en el campo de la
+                educación y la formación pedagógica
+              </dd>
+            </div>
+          </div>
+        </section>
+      </main>
+      <aside class="barra-lateral">
+        <h3>Contacto</h3>
+        <details>
+          <summary>Mi correo</summary>
+          <p><a href="mailto:jossersol1@gmail.com">jossersol1@gmail.com</a></p>
+        </details>
+        <details>
+          <summary>Mi teléfono</summary>
+          <p><a href="tel:+573176858381"></a>Llamar al 317 685 8381</p>
+        </details>
+        <details>
+          <summary>Mi dirección</summary>
+          <p><a href="https://maps.app.goo.gl/qnruKvSJcqrwdf869" target="_blank">Barrio San Diego - Medellín</a></p>
+        </details>
+        <details>
+          <summary>GitHub</summary>
+          <p><a href="https://github.com/jossersolano" target="_blank">https://github.com/jossersolano</a></p>
+        </details>
+        <details>
+          <summary>LinkedIn</summary>
+          <p>No disponible</p>
+        </details>
+      </aside>
+      <!-- aqui va el contenido de la página footer -->
+      <footer class="footer">
+        <address>Medellín, Antioquia</address>
+        <small>&copy; Derechos Reservados 2025</small>
+      </footer>
+    </div>
   </body>
 </html>

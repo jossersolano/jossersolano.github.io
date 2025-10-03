@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <!-- perfil laboral -->
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Josser Solano</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles.css">
-  <script src="../script.js" defer></script>
-</head>
-<body>
-  <!-- Aqui va el contenido de la página header -->
-  <header data-include="header.html"></header>
-  <main>
-    <section>
-      <h2>Perfil Laboral</h2>
-      <p>Tecnólogo en formación en Análisis y Desarrollo de Software, con experiencia práctica en automatización de procesos y análisis de datos. He aplicado herramientas como Python, SQL y Power Query en entornos laborales reales para generar informes automatizados y soluciones operativas.</p>
-      <p>Durante mi formación técnica he profundizado en metodologías de análisis de software, bases de datos relacionales y NoSQL, y he explorado tecnologías como JavaScript, HTML y PHP.</p>
-      <p>Me destaco por ser analítico, metódico y colaborativo, con alta disposición para aprender y aportar valor. Actualmente disponible para contrato de aprendizaje. </p>
-    </section>
-    <aside data-include="barra-lateral.html"></aside>
-  </main>
-  <!-- aqui va el contenido de la página footer -->
-  <footer data-include="footer.html"></footer>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Josser Solano</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+  </head>
+  <body>
+    <div class="grid">
+      <header class="banner">
+        <div class="header">
+          <div class="circulo">
+            <div perfil-header>
+              <img
+                src="https://avatars.githubusercontent.com/u/193249316?v=4"
+                alt="Josser Solano"
+                class="foto"
+              />
+            </div>
+            <svg class="arcos" viewBox="0 0 220 220">
+              <circle class="arco arco-externo" cx="110" cy="108" r="100" />
+              <circle class="arco arco-interno" cx="110" cy="108" r="93" />
+            </svg>
+          </div>
+          <h1 class="nombre">Josser Solano</h1>
+          <p class="titulo">
+            Aprendiz Tecnólogo en Análisis y Desarrollo de Software
+          </p>
+        </div>
+      </header>
+      <div class="espacio-nav izquierda"></div>
+      <nav class="navegacion">
+        <a href="index.html" class="tab">Mi perfil</a>
+        <a href="nivel-educativo.html" class="tab">Mi nivel educativo</a>
+        <a href="educacion-informal.html" class="tab">Mi educación informal</a>
+        <a href="experiencia.html" class="tab">Mi experiencia</a>
+        <a href="libros.html" class="tab">Mis libros de consulta</a>
+      </nav>
+      <div class="espacio-nav derecha"></div>
+      <main class="contenido-principal">
+        <section class="contenido">
+          <h2>Perfil Laboral</h2>
+          <p>
+            Tecnólogo en formación en Análisis y Desarrollo de Software, con
+            experiencia práctica en automatización de procesos y análisis de
+            datos. He aplicado herramientas como Python, SQL y Power Query en
+            entornos laborales reales para generar informes automatizados y
+            soluciones operativas.
+          </p>
+          <p>
+            Durante mi formación técnica he profundizado en metodologías de
+            análisis de software, bases de datos relacionales y NoSQL, y he
+            explorado tecnologías como JavaScript, HTML y PHP.
+          </p>
+          <p>
+            Me destaco por ser analítico, metódico y colaborativo, con alta
+            disposición para aprender y aportar valor. Actualmente disponible para
+            contrato de aprendizaje.
+          </p>
+        </section>
+      </main>
+      <aside class="barra-lateral">
+        <h3>Contacto</h3>
+        <details>
+          <summary>Mi correo</summary>
+          <p><a href="mailto:jossersol1@gmail.com">jossersol1@gmail.com</a></p>
+        </details>
+        <details>
+          <summary>Mi teléfono</summary>
+          <p><a href="tel:+573176858381"></a>Llamar al 317 685 8381</p>
+        </details>
+        <details>
+          <summary>Mi dirección</summary>
+          <p><a href="https://maps.app.goo.gl/qnruKvSJcqrwdf869" target="_blank">Barrio San Diego - Medellín</a></p>
+        </details>
+        <details>
+          <summary>GitHub</summary>
+          <p><a href="https://github.com/jossersolano" target="_blank">https://github.com/jossersolano</a></p>
+        </details>
+        <details>
+          <summary>LinkedIn</summary>
+          <p>No disponible</p>
+        </details>
+      </aside>
+      <!-- aqui va el contenido de la página footer -->
+      <footer class="footer">
+        <address>Medellín, Antioquia</address>
+        <small>&copy; Derechos Reservados 2025</small>
+      </footer>
+    </div>
+  </body>
 </html>
-

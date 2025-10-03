@@ -15,35 +15,90 @@
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <!-- Aqui va el contenido de la página header -->
-    <header data-include="header.html"></header>
-    <main>
-      <section>
-        <h2>Mi experiencia</h2>
-        <ol>
-          <li>Jefe de operaciones - Grupo Hisca SAS</li>
-          <dt>01/02/2021 - 31/05/2025</dt>
-          <ul>
-            <li>
-              Supervisión de operaciones, implementación de estrategias
-              operativas, optimización de procesos, análisis y manejo de datos,
-              elaboración y automatización de informes, acompañamiento en
-              proyectos de implementación TI, manejo del Servidor.
-            </li>
-          </ul>
-          <li>Coordinador de Movimientos - Grupo Hisca SAS</li>
-          <dt>01/05/2019 - 31/01/2021</dt>
-          <ul>
-            <li>
-              Dirección del área, cargue de movimientos,manejo de comunicación
-              (correos), elaboración de informes.
-            </li>
-          </ul>
-        </ol>
-      </section>
-      <aside data-include="barra-lateral.html"></aside>
-    </main>
-    <!-- aqui va el contenido de la página footer -->
-    <footer data-include="footer.html"></footer>
+    <div class="grid">
+      <header class="banner">
+        <div class="header">
+          <div class="circulo">
+            <div perfil-header>
+              <img
+                src="https://avatars.githubusercontent.com/u/193249316?v=4"
+                alt="Josser Solano"
+                class="foto"
+              />
+            </div>
+            <svg class="arcos" viewBox="0 0 220 220">
+              <circle class="arco arco-externo" cx="110" cy="108" r="100" />
+              <circle class="arco arco-interno" cx="110" cy="108" r="93" />
+            </svg>
+          </div>
+          <h1 class="nombre">Josser Solano</h1>
+          <p class="titulo">
+            Aprendiz Tecnólogo en Análisis y Desarrollo de Software
+          </p>
+        </div>
+      </header>
+      <div class="espacio-nav izquierda"></div>
+      <nav class="navegacion">
+        <a href="index.html" class="tab">Mi perfil</a>
+        <a href="nivel-educativo.html" class="tab">Mi nivel educativo</a>
+        <a href="educacion-informal.html" class="tab">Mi educación informal</a>
+        <a href="experiencia.html" class="tab">Mi experiencia</a>
+        <a href="libros.html" class="tab">Mis libros de consulta</a>
+      </nav>
+      <div class="espacio-nav derecha"></div>
+      <main class="contenido-principal">
+        <section>
+          <h2>Experiencia</h2>
+          <ol class="lista">
+            <li>Jefe de operaciones - Grupo Hisca SAS</li>
+            <dt>01/02/2021 - 31/05/2025</dt>
+            <ul class="descripcion">
+              <li>
+                Supervisión de operaciones, implementación de estrategias
+                operativas, optimización de procesos, análisis y manejo de
+                datos, elaboración y automatización de informes, acompañamiento
+                en proyectos de implementación TI, manejo del Servidor.
+              </li>
+            </ul>
+            <li>Coordinador de Movimientos - Grupo Hisca SAS</li>
+            <dt>01/05/2019 - 31/01/2021</dt>
+            <ul class="descripcion">
+              <li>
+                Dirección del área, cargue de movimientos,manejo de comunicación
+                (correos), elaboración de informes.
+              </li>
+            </ul>
+          </ol>
+        </section>
+      </main>
+      <aside class="barra-lateral">
+        <h3>Contacto</h3>
+        <details>
+          <summary>Mi correo</summary>
+          <p><a href="mailto:jossersol1@gmail.com">jossersol1@gmail.com</a></p>
+        </details>
+        <details>
+          <summary>Mi teléfono</summary>
+          <p><a href="tel:+573176858381"></a>Llamar al 317 685 8381</p>
+        </details>
+        <details>
+          <summary>Mi dirección</summary>
+          <p><a href="https://maps.app.goo.gl/qnruKvSJcqrwdf869" target="_blank">Barrio San Diego - Medellín</a></p>
+        </details>
+        <details>
+          <summary>GitHub</summary>
+          <p><a href="https://github.com/jossersolano" target="_blank">https://github.com/jossersolano</a></p>
+        </details>
+        <details>
+          <summary>LinkedIn</summary>
+          <p>No disponible</p>
+        </details>
+      </aside>
+      <!-- aqui va el contenido de la página footer -->
+      <footer class="footer">
+        <address>Medellín, Antioquia</address>
+        <small>&copy; Derechos Reservados 2025</small>
+      </footer>
+    </div>
   </body>
 </html>

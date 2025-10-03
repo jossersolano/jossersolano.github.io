@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,75 +11,372 @@ body {
   background-image: url("../images/mark-eder-R9OS29xJb-8-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
-  background-position: 50% 50%;
+  /*display: flex;*/
+  /*justify-content: center;*/
+  /*background-position: 50% 50%;*/
 }
 
-header,
-footer {
+.grid{
+  /*background-color: #ccc;*/
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: auto auto 1fr 1fr auto;
+  grid-template-areas:
+    "banner banner banner banner banner"
+    "izquierda navegacion navegacion barra-lateral derecha"
+    ". contenido-principal contenido-principal barra-lateral ."
+    ". contenido-principal contenido-principal barra-lateral ."
+    "footer footer footer footer footer";
+  min-height: 100vh;
+}
+
+.banner {
+  /*grid-column: 1/-1;*/
+  grid-area: banner;
+  padding: 20px 0px;
   background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
   color: white;
-  text-align: center;
-  padding: 1rem 0;
-}
+  justify-content: center;
 
-header {
-  &.circulo {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 40px;
+  .header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
 
-    &.perfil-header {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      overflow: hidden;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 1;
-      
-      &.foto {
+    .circulo {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      /*border: 1px dashed red;*/
+      align-items: center;
+      display: flex;
+
+      .perfil-header {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+
+      /* SVG que contiene los arcos */
+      .arcos {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        z-index: 0;
+        /*border: 1px dashed blue;*/
+
+        /* Estilo de los arcos */
+        .arco {
+          fill: none;
+          stroke: #6f675a;
+          stroke-width: 4;
+          stroke-linecap: round;
+        }
       }
-    }
-
-    &.arcos {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-
-      &.arco {
-        fill: none;
-        stroke: #6f675a;
-        stroke-width: 4;
-        stroke-linecap: round;
-      }
-
-      &.arco-externo {
-        stroke-dasharray: 450 150; 
-        stroke-dashoffset: -60; 
-      }
-
-      &.arco-interno {
-        stroke-dasharray: 400 134;
-        stroke-dashoffset: 200;
-
     }
   }
+}
 
+.foto {
+  width: 78%;
+  /*height: 100%;*/
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Arco externo */
+.arco-externo {
+  stroke-dasharray: 482 146; /* 628 */
+  stroke-dashoffset: -77;
+}
+
+/* Arco interno */
+.arco-interno {
+  stroke-dasharray: 438 146; /*584*/
+  stroke-dashoffset: 219;
+}
+
+
+.navegacion {
+  grid-area: navegacion;
+  display: flex;
+  color: white;
+  text-decoration: none;
+  border-radius: none;
+  transition: background-color 0.3s ease;
+
+  .tab {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: none;
+    background: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: visible;
+  }
+
+  .tab.active {
+    color: black;
+    background: rgb(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
   }
 }
 
 
-/* .foto{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  margin-bottom: 1rem;
-} */
+.espacio-nav {
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .izquierda {
+    grid-area: izquierda;
+  }
+
+  .derecha {
+    grid-area: derecha;
+    grid-row: span 2;
+  }
+} 
+
+
+.contenido-principal {
+  grid-area: contenido-principal;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  padding: 20px 5px;
+  width: 800px;
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+  }
+
+  p {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-indent: 2em;
+  }
+}
+
+.tabla-cursos {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  width: 100%;
+  /*overflow-x: auto;*/
+
+  caption {
+    caption-side: top;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  tr,
+  th,
+  td {
+    border: 1px solid #000;
+    padding: 5px;
+  }
+
+  thead {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+
+  .ico {
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 24px;
+    padding-left: 45px;
+  }
+
+  .platzi{
+      background-image: url('https://static.platzi.com/media/uploads/icon_77b5127626.png');
+    }
+
+  .edx {
+    background-image: url('https://www.edx.org/favicon.ico');
+    background-size: 30px;
+  }
+
+  .linkedin {
+    background-image: url('https://static.licdn.com/aero-v1/sc/h/al2o9zrvru7aqj8e1x2rzsrca');
+  }
+
+   .sena {
+    background-image: url('https://certificadossena.net/wp-content/uploads/2022/10/logo-sena-verde-complementario-svg-2022.svg');
+  }
+
+  .udemy {
+    background-image: url('https://www.udemy.com/staticx/udemy/images/v8/favicon-32x32.png');
+  }
+
+  .alcaldia {
+    background-image: url('https://media.licdn.com/dms/image/v2/C560BAQF5yEiIRp9IIw/company-logo_200_200/company-logo_200_200/0/1655399431121/industria_de_talentos_logo?e=2147483647&v=beta&t=n1KjeupuVVRUu5LWw06w-Z6O7xMupne5SaS9sfcnTxs');
+  }
+}
+
+.lista {
+  list-style-position: inside;
+  padding-left: 40px;
+  margin-bottom: 20px;
+
+  dt {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  ol {
+    list-style: decimal;
+    list-style-position: outside;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style: disc;
+    margin: 20px;
+    list-style-position: inside;
+    line-height: 30px;
+  }
+
+  .descripcion {
+    margin: 20px;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.6;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+}
+
+.nivel-educativo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    border-radius: 10px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+
+  dt {
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  dd {
+    margin-left: 20px;
+    margin-top: 5px;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.6;
+  }
+
+  .nivel {
+    margin-bottom: 20px;
+  }
+}
+
+.libros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+
+  .libro {
+    width: 150px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+    }
+
+    p {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .info-libro {
+      margin-top: 5px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  }
+}
+
+
+.barra-lateral {
+  padding-top: var(--altura-navegacion);
+  grid-area: barra-lateral;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  color: white;
+  width: 280px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    letter-spacing: 3px;
+  }
+
+  details {
+    padding: 10px 0px;
+    cursor: pointer;
+  }
+
+  summary {
+    /*font-weight: bold;*/
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: white;
+  }
+}
+
+.footer {
+  grid-area: footer;
+  padding: 15px 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  color: white;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+}
