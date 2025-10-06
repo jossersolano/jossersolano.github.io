@@ -314,18 +314,18 @@ body {
     border-radius: 5px;*/
   }
 
-  .nivel:first-of-type {
+  /*.nivel:first-of-type {
     filter: blur(2px);
-  }
+  }*/
 
   img {
     border-radius: 10px;
     margin-right: 20px;
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1);
 
-    &.imagen-blur {
+    /*&.imagen-blur {
       filter: blur(20px);
-    }
+    }*/
   }
 
   .describe-nivel {
