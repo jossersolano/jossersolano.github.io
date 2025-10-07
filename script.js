@@ -26,16 +26,38 @@ document.querySelectorAll('.tab').forEach(tab => {
 });
 
 
+// // Ajustar el padding-top de la barra lateral según la altura de la navegación
+// window.addEventListener('DOMContentLoaded', () => {
+//   const navegacion = document.querySelector('.navegacion');
+//   const barraLateral = document.querySelector('.barra-lateral');
+
+//   if (navegacion && barraLateral) {
+//     const altura = navegacion.offsetHeight;
+//     barraLateral.style.paddingTop = `${altura}px`;
+//   }
+// });
+
 // Ajustar el padding-top de la barra lateral según la altura de la navegación
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', ajustarPaddingBarraLateral);
+window.addEventListener('resize', ajustarPaddingBarraLateral);
+
+function ajustarPaddingBarraLateral() {
   const navegacion = document.querySelector('.navegacion');
   const barraLateral = document.querySelector('.barra-lateral');
 
   if (navegacion && barraLateral) {
-    const altura = navegacion.offsetHeight;
-    barraLateral.style.paddingTop = `${altura}px`;
+    // Solo aplica en pantallas mayores a 768px
+    if (window.innerWidth > 768) {
+      const altura = navegacion.offsetHeight;
+      barraLateral.style.paddingTop = `${altura}px`;
+    } else {
+      // En móvil, se resetea para evitar espacios innecesarios
+      barraLateral.style.paddingTop = '';
+    }
   }
-});
+}
+
+
 
 
 

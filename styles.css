@@ -83,28 +83,28 @@ body {
         }
       }
     }
+  
+  .foto {
+    width: 78%;
+    /*height: 100%;*/
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Arco externo */
+  .arco-externo {
+    stroke-dasharray: 482 146; /* 628 */
+    stroke-dashoffset: -77;
+  }
+
+  /* Arco interno */
+  .arco-interno {
+    stroke-dasharray: 438 146; /*584*/
+    stroke-dashoffset: 219;
+  }
+
   }
 }
-
-.foto {
-  width: 78%;
-  /*height: 100%;*/
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Arco externo */
-.arco-externo {
-  stroke-dasharray: 482 146; /* 628 */
-  stroke-dashoffset: -77;
-}
-
-/* Arco interno */
-.arco-interno {
-  stroke-dasharray: 438 146; /*584*/
-  stroke-dashoffset: 219;
-}
-
 
 .navegacion {
   grid-area: navegacion;
@@ -132,6 +132,10 @@ body {
     background: rgb(255, 255, 255, 0.1);
     backdrop-filter: blur(5px);
   }
+
+  .nav-toggle {
+    display: none;
+  }
 }
 
 
@@ -154,7 +158,11 @@ body {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(5px);
   padding: 20px 5px;
-  width: 800px;
+  /* width: 800px; */
+  max-width: 800px; /*mejor cambio para implementar responsive*/
+  width: 100%; /*mejor cambio para implementar responsive*/
+  margin: 0 auto;
+
 
   h2 {
     font-weight: bold;
@@ -201,6 +209,11 @@ body {
     display: flex;
     gap: 10px;
     flex-direction: column;
+
+    small {
+      font-size: 0.8em;
+      color: #555;
+    }
   }
 }
 
@@ -361,11 +374,14 @@ body {
 .libros {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
   grid-template-rows: 1fr;
   /* flex-wrap: wrap; */
   gap: 20px;
   justify-items: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
   h2 {
     grid-column: 1 / -1;
@@ -419,7 +435,9 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(5px);
   color: white;
-  width: 280px;
+  /* width: 280px; */
+  max-width: 280px; /*mejor cambio para implementar responsive*/
+  width: 100%;  /*mejor cambio para implementar responsive*/
 
   h3 {
     text-align: center;
@@ -452,4 +470,151 @@ body {
   text-align: center;
   display: grid;
   gap: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.libro-img {
+  max-width: none;
+  transition: transform 0.3s ease;
+}
+
+.libro-img:hover {
+  transform: scale(1.5);
+}
+
+/* ===  TABLET (max-width: 992px) === */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "banner banner"
+      "navegacion barra-lateral"
+      "contenido-principal barra-lateral"
+      "footer footer";
+  }
+
+  .contenido-principal {
+    padding: 15px;
+  }
+
+  .texto {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+  }
+
+  .texto p,
+  .texto figure,
+  .texto figcaption {
+    grid-column: auto;
+  }
+
+  .barra-lateral {
+    padding: 15px;
+    font-size: 0.95em;
+  }
+
+  .libros {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 100%;
+  }
+}
+
+/* ===  MÓVIL (max-width: 768px) === */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "banner"
+      "navegacion"
+      "contenido-principal"
+      "barra-lateral"
+      "footer";
+  }
+
+  .banner .circulo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contenido-principal {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .tabla-cursos {
+    display: block;
+    overflow-x: auto;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: 0.85em;
+  }
+
+  .tabla-cursos table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .libros {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer {
+    font-size: 0.8em;
+    padding: 10px;
+  }
+}
+
+/* ===  EXTRA PEQUEÑO (max-width: 480px) === */
+@media (max-width: 480px) {
+  .navegacion .tab {
+    flex: 1 1 100%;
+  }
+
+  h1.nombre {
+    font-size: 1.3em;
+  }
+
+  .titulo {
+    font-size: 0.9em;
+  }
+
+  .banner {
+    text-align: center;
+  }
+
+  .barra-lateral h3 {
+    font-size: 1em;
+  }
+
+  .navegacion {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    flex-direction: column;
+
+    .tab {
+      flex: 1 1 100%;
+      padding: 8px;
+      font-size: 0.9em;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      /* border-bottom: 1px solid rgba(255, 255, 255, 0.2); */
+    }
+
+    .tab.active {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+    }
+  }
 }
